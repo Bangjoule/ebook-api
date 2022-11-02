@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class author extends Model
 {
     protected $fillable =[
-        'date_of_birth', 'place_of_birth', 'email', 'gender', 'hp'
+        'name', 'date_of_birth', 'place_of_birth', 'email', 'gender', 'hp'
     ];
 }

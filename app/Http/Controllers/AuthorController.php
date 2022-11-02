@@ -37,6 +37,7 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         $author = new author();
+        $author->name = $request->input('name');
         $author->date_of_birth = $request->input('date_of_birth');
         $author->place_of_birth = $request->input('place_of_birth');
         $author->email = $request->input('email');
@@ -94,6 +95,7 @@ class AuthorController extends Controller
     {
         $author = author::find($id);
         if($author){
+            $author->name = $request->name ? $request->name : $author->name;
             $author->date_of_birth = $request->date_of_birth ? $request->date_of_birth : $author->date_of_birth;
             $author->place_of_birth = $request->place_of_birth ? $request->place_of_birth : $author->place_of_birth;
             $author->email = $request->email ? $request->email : $author->email;
