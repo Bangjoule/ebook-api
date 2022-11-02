@@ -96,7 +96,7 @@ class AuthorController extends Controller
         if($author){
             $author->date_of_birth = $request->date_of_birth ? $request->date_of_birth : $author->date_of_birth;
             $author->place_of_birth = $request->place_of_birth ? $request->place_of_birth : $author->place_of_birth;
-            $author->email = $request->email ? $request->email : $book->email;
+            $author->email = $request->email ? $request->email : $author->email;
             $author->gender = $request->gender ? $request->gender : $author->gender;
             $author->hp = $request->hp ? $request->hp : $author->hp;
             $author->save();
